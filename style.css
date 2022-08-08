@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 1px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('./images/shoe.jpg');
+    background-size: cover;
+    background-position-x: 20%;
+    background-position-y: 20px;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    animation: introLoad 2s forwards;
+ /* overflow: hidden; */
+}
+
+.logo{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+nav{
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: rgb(160, 122, 122);
+    height: 100vh;
+    width: 30%;
+    z-index: 999;
+    text-transform: uppercase;
+    transform: translate(100%);
+    transition: transform .5s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 8em;
+}
+
+.link {
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    font-size: 20px;
+}
+
+.link:hover{
+    background: gray;
+}
+
+.fa-xmark{
+    float: right;
+    font-size: 50px;
+    color: black;
+    padding: 10px 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.fa-bars{
+    width: 50px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+section h1{
+    font-size: 3rem;
+    margin-top: 3em;
+    line-height: 3.3rem;
+}
+
+.subhead{
+    font-size: 1.2rem;
+    padding-top: 50px;
+}
+
+section.hero {
+    color: white;
+    height: 90vh;
+    animation: moveDown 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+arrow{
+    stroke: white;
+    position: absolute;
+    bottom: 1em;
+    font-size: 100px;
+    animation: moveArrow 1s alternate-reverse infinite;
+}
+
+.more-info{
+    display: grid;
+    margin: 1px 100px;
+
+}
+
+.more-info img{
+    width: 100%;
+    object-fit: cover;
+    height: 15em;
+}
+
+.more-info .title{
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 30px;
+}
+
+.more-info .desc{
+    line-height: 1.5rem;
+    font-size: 15px;
+}
+
+.open-nav{
+    transform: translateX(0%);
+}
+
+@media only screen and (min-width: 680px) {
+    body{
+        margin: 5px 10px;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .fa-bars{
+        display: none;
+    }
+
+    nav {
+        transform: translateX(0);
+        position: unset;
+        display: auto;
+        width: auto;
+        height: auto;
+        background: none;
+    }
+
+    .fa-xmark{
+        display: none;
+    }
+
+    nav ul{
+        display: flex;
+        margin: 0;
+    }
+
+    nav .link {
+        color: white;
+        padding: .5em 1.5em;
+        font-size: .9rem;
+    }
+
+    nav .link:hover{
+        background: none;
+        text-decoration: underline;
+    }
+
+    .hero-img{
+        left: unset;
+        right: 0;
+        width: 50%;
+        height: 40em;
+    }
+
+    .logo {
+        color: black;
+    }
+
+    span {
+        color: red;
+    }
+
+    section.hero {
+        color: black;
+        height: auto;
+        width: 40%;
+        margin-bottom: 12em;
+    }
+
+    arrow{
+        stroke: black;
+        position: unset;        
+        font-size: 80px;
+    }
+
+    .feature {
+        display: grid; 
+        grid-template-columns: repeat(2, auto);
+        gap: 3em;
+        margin-bottom: 8em;
+    }
+
+    .more-info img{
+        width: 25em;
+    }
+
+    .content {
+        text-align: right;
+        width: 25em;
+        text-align: left;
+    }
+
+    .feature.left {
+        grid-template-areas: "left right";
+    }
+
+    .feature.left img{
+        grid-area: left;
+    }
+
+    .feature.left .content{
+        text-align: left;
+        width: 25em;
+        justify-self: left;
+        color: rgba(153, 47, 73, 0.863);
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .feature {
+        gap: 0;
+    }
+}
+
+@keyframes introLoad {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes moveArrow {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
