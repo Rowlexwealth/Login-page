@@ -5,30 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="./signup.css">
     <title>Create Account</title>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h2>SignUp</h2>
+            <h2>SignUp Logo</h2>
         </div>
         <form class="form" id="form">
 
             <div class="form-control">
                 <label>Email</label>
                 <input type="email" placeholder="rowland@gmail.com" id="email">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <small>Error message</small>
+                <i class="uil uil-envelope icon"></i>
+                <div><small></small></div>
             </div>
             <div class="form-control">
                 <label>Password</label>
-                <input type="text" placeholder="Password" id="password">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <small>Error message</small>
+                <input type="text" class="password" placeholder="Password" id="password">
+                <i class="uil uil-lock icon"></i>
+                <i class="uil uil-eye-slash showHidePw"></i>
+                <small></small>
             </div>
+            <div class="checkbox-text">
+                <div class="checkbox-content">
+                    <input type="checkbox" id="logCheck">
+                    <label for="logCheck" class="text">Remember me</label>
+                </div>
+
+                <a href="#" class="text">Forgot password?</a>
+            </div> 
 
             <button>Login</button>
         </form>
@@ -40,5 +48,6 @@
     </div>
 
     <script  src="./signup.js"></script>
+    <script src="../signup-2.js"></script>
 </body>
 </html>

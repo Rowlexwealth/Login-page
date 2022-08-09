@@ -10,7 +10,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    margin: 0;
+    margin: 20px 1px;
     font-family: "Poppins", sans-serif;
 }
 
@@ -49,13 +49,15 @@ body{
 }
 
 .form-control input {
-    border: 2px solid #f0f0f0;
-    border-radius: 4px;
+    height: 100%;
+    border-bottom: 1px solid rgb(219, 206, 206);
+    border-radius: 5px;
     display: block;
     font-family: inherit;
-    font-size: 14px;
-    padding: 10px;
+    font-size: 16px;
+    padding: 7px 30px;
     width: 100%;
+    transition: all 0.2s ease;
 }
 
 .form-control.success input {
@@ -68,26 +70,40 @@ body{
 
 .form-control i {
     position: absolute;
-    top: 40px;
-    right: 10px;
-    visibility: hidden;
+    top: 50px;
+    left: 5;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: #999;
+    transition: all 0.2s ease;
+    padding: 1px 5px;
 }
 
-.form-control.success i.fa-check-circle {
-    color: #2ecc71;
-    visibility: visible;
+.form-control input:is(:focus, :valid) ~ i{
+    color: green;
 }
 
-.form-control.error i.fa-exclamation-circle {
-    color: #e74c3c;
-    visibility: visible;
+.form-control i.icon{
+    left: 0;
+}
+
+.form-control i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.form-control i.showHidePv{
+    right: 0;
+    cursor: pointer;
+    padding: 5px;
 }
 
 .form-control small {
     visibility: hidden;
     position: absolute;
     bottom: 0;
-    left: 0; 
+    left: 0;
 }
 
 .form-control.error small {
