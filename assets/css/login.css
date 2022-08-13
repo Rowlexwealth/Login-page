@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #d4c7da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 20px 1px;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0,0, 0.3);
+    width: 40%;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.header {
+    background-color: #f7f7f7;
+    border: 1px solid #f0f0f0;
+    padding: 20px 40px;
+}
+
+.header h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.form {
+    padding: 30px 40px;
+}
+
+.form-control {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    width: 100%;
+}
+
+.form-control input {
+    margin-top: 20px;
+    height: 100%;
+    padding: 7px 30px;
+    width: 100%;
+    transition: all 0.2s ease;
+    border-radius: 10px;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+    /* border-top: 2px solid transparent; */
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control input:is(:focus, :valid) {
+    border-bottom-color: green;
+}
+
+.form-control i {
+    position: absolute;
+    top: 35px;
+    left: 5;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #999;
+    transition: all 0.2s ease;
+    padding: 1px 5px;
+}
+
+.form-control input:is(:focus, :valid) ~ i{
+    color: green;
+}
+
+.form-control i.icon{
+    left: 0;
+}
+
+.form-control i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+/* .form-control small {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    margin: -15px 2px;
+} */
+
+.form-control.error small {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form button {
+    background-color: rgb(58, 206, 58);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    color: #fff;
+    display: inherit;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    margin-top: 50px;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    font-weight: 500;
+}
+
+.form .checkbox-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px ;
+    max-width: 100%;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
+}
+
+/* .chechbox-content input {
+    margin: 0 8px -2px 4px;
+    accent-color: red;
+} */
+
+.form .text {
+    color: #333;
+    font-size: 13px;
+    padding: 1px;
+
+}
+
+.form a.text {
+    /* color: #4070f4; */
+    text-decoration: none;
+}
+
+.form .signup a {
+    color: chocolate;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form-controlled input {
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s ease;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid green;
+    /* border-top: 2px solid transparent; */
+}
+
+.form-controlled {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.log {
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    margin-top: 7px;
+}
