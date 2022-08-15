@@ -1,8 +1,6 @@
 const form = document.getElementById('form');
-// const username = document.getElementById('username');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
+const password = document.getElementById('rest-pword');
+const password2 = document.getElementById('rest-pword2');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -12,29 +10,9 @@ form.addEventListener('submit', (e) => {
 
 function checkinputs() {
     //get the values from the inputs
-    // const usernameValue = username.value.trim();
-    const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
     const password2Value = password2.value.trim();
 
-    // if(usernameValue === '') {
-    //     // show error
-    //     // add error class
-    //     setErrorFor(username, 'Username cannot be blank');
-    // } else if (usernameValue.length < 6) {
-    //     setErrorFor(username, 'Username must contain at least 6 characters')
-    // } else {
-    //     // add success class
-    //     setSuccessFor(username);
-    // }
-
-    if(emailValue === '') {
-        setErrorFor(email, 'Email cannot be blank');
-    } else if(!isEmail(emailValue)) {
-        setErrorFor(email, 'Email is not valid');
-    } else {
-        setSuccessFor(email);
-    }
 
     if(passwordValue === '') {
         setErrorFor(password, 'Password cannot be blank');
@@ -74,29 +52,27 @@ function isEmail(email){
     return pattern.test(email);
 }
 
+// Js code to show/hide password and change iconscout
 
-
-// JS code to show/hide pasword and change icon
-
-const   pwShowHide = document.querySelectorAll(".showHidePw"),
-        pvShowHide = document.querySelectorAll(".showHidePv"),
-        pwFields = document.querySelectorAll(".password"),
-        pvFields = document.querySelectorAll(".password2");
+const   resetShowIcon = document.querySelectorAll(".reset-showPw"),
+        resetHideIcon = document.querySelectorAll(".reset-hidePv"),
+        resetFields = document.querySelectorAll(".reset-icon"),
+        reserFields = document.querySelectorAll(".reset-icon2");
 
 // JS code to show/hide pasword and change icon
-pwShowHide.forEach(eyeIcon =>{
+resetShowIcon.forEach(eyeIcon =>{
     eyeIcon.addEventListener("click", ()=>{
-        pwFields.forEach(pwField => {
+        resetFields.forEach(pwField => {
             if(pwField.type ==="password"){
                 pwField.type = "text";
 
-                pwShowHide.forEach(icon =>{
+                resetShowIcon.forEach(icon =>{
                     icon.classList.replace("uil-eye-slash", "uil-eye");
                 })
             } else{
                 pwField.type = "password"
 
-                pwShowHide.forEach(icon =>{
+                resetShowIcon.forEach(icon =>{
                     icon.classList.replace("uil-eye", "uil-eye-slash");
                 })
             }
@@ -105,19 +81,19 @@ pwShowHide.forEach(eyeIcon =>{
 });
 
 // Confirm password
-pvShowHide.forEach(eyeIcon =>{
+resetHideIcon.forEach(eyeIcon =>{
     eyeIcon.addEventListener("click", ()=>{
-        pvFields.forEach(pvField => {
+        resetFields.forEach(pvField => {
             if(pvField.type ==="password"){
                 pvField.type = "text";
 
-                pvShowHide.forEach(icon =>{
+                resetHideIcon.forEach(icon =>{
                     icon.classList.replace("uil-eye-slash", "uil-eye");
                 })
             } else{
                 pvField.type = "password"
 
-                pvShowHide.forEach(icon =>{
+                resetHideIcon.forEach(icon =>{
                     icon.classList.replace("uil-eye", "uil-eye-slash");
                 })
             }

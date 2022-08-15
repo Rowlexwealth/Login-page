@@ -20,7 +20,7 @@ body{
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0, 0,0, 0.3);
-    width: 40%;
+    width: 400px;
     overflow: hidden;
     max-width: 100%;
 }
@@ -154,7 +154,7 @@ button:hover{
 .form .text {
     color: #333;
     font-size: 13px;
-    padding: 1px;
+    padding: 3px;
 
 }
 

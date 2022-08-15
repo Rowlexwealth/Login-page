@@ -18,7 +18,7 @@ body{
 
 .container {
     background-color: #fff;
-    border-radius: 15px;
+    border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0,0, 0.3);
     width: 400px;
     overflow: hidden;
@@ -31,9 +31,12 @@ body{
     padding: 20px 40px;
 }
 
-.header h2 {
+.form h2{
     margin: 0;
     text-align: center;
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .form {
@@ -41,21 +44,26 @@ body{
 }
 
 .form-control {
-    margin-bottom: 1px;
-    padding-bottom: 5px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
     position: relative;
-    width: 100%;
 }
+
+/* .form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+} */
 
 .form-control input {
     height: 100%;
-    border: 2px solid #ccc;
-    border-radius: 10px;
+    border-bottom: 1px solid rgb(219, 206, 206);
+    border-radius: 5px;
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
     padding: 7px 30px;
-    margin-top: 20px;
     width: 100%;
     transition: all 0.2s ease;
-    outline: none;
 }
 
 .form-control.success input {
@@ -68,10 +76,10 @@ body{
 
 .form-control i {
     position: absolute;
-    top: 35px;
+    top: 20px;
     left: 5;
     transform: translateY(-50%);
-    font-size: 18px;
+    font-size: 20px;
     color: #999;
     transition: all 0.2s ease;
     padding: 1px 5px;
@@ -85,24 +93,24 @@ body{
     left: 0;
 }
 
-.form-control i.showHidePw{
+.form-control i.reset-showPw{
     right: 0;
     cursor: pointer;
     padding: 5px;
 }
 
-.form-control i.showHidePv{
+.form-control i.reset-hidePv{
     right: 0;
     cursor: pointer;
     padding: 5px;
 }
 
-/* .form-control small {
+.form-control small {
     visibility: hidden;
     position: absolute;
-    bottom: 10;
+    bottom: 0;
     left: 0;
-} */
+}
 
 .form-control.error small {
     color: #e74c3c;
@@ -110,8 +118,8 @@ body{
 }
 
 .form button {
-    background-color: green;
-    border: 2px solid #8e44ad;
+    background-color: #2ecc71;
+    border: 2px solid #2ecc71;
     border-radius: 4px;
     color: #fff;
     display: inherit;
@@ -121,69 +129,21 @@ body{
     width: 100%;
     cursor: pointer;
     letter-spacing: 2px;
-    margin-top: 10px;
+    margin-top: 150px;
 }
 
-button:hover{
-    background-color: black;
-    color: white;
-    font-weight: 500;
+.form button a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
 }
 
-/* .text a{
+/* .login-signup{
+    margin: 10px 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.text a{
     text-decoration: none;
 } */
-
-.form .checkbox-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px ;
-    max-width: 100%;
-}
-
-.checkbox-text .checkbox-content {
-    display: flex;
-    align-items: center;
-    /* width: 100%; */
-}
-
-.form .text {
-    color: #333;
-    font-size: 13px;
-    padding: 3px;
-}
-
-.form .signup a {
-    color: chocolate;
-    text-decoration: none;
-    font-size: 13px;
-}
-
-.form a:hover {
-    text-decoration: underline;
-}
-
-.form-controlled input {
-    height: 100%;
-    width: 100%;
-    transition: all 0.2s ease;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid green;
-    /* border-top: 2px solid transparent; */
-}
-
-.form-controlled {
-    display: inline-flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.log {
-    display: inline-block;
-    font-size: 15px;
-    text-align: center;
-    width: 100%;
-    margin-top: 7px;
-}
